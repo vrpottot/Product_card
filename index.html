@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сайт компании с услугами и статьями">
+  <meta name="keywords" content="услуги, статьи, ремонт, техника">
+  <title>Главная | Название компании</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h1>Header Logo</h1>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="articles container">
+      <h2>Статьи</h2>
+      <div class="cards">
+        <article class="card">
+          <img class="img-head" src="1.png" alt="Февральские скидки на товары">
+          <h3>Февральское поступление товара и актуальные скидки</h3>
+          <br>
+          <p>Экономьте на ремонте своего автомобиля, не упуская выгодных возможностей</p>
+          <br>
+          <time datetime="2023-11-26">26.11.2023</time>
+        </article>
+        <article class="card">
+          <img class="img-head" src="2.png" alt="Январские скидки на товары">
+          <h3>Январское поступление товара и актуальные скидки</h3>
+          <br>
+          <p>Экономьте на ремонте своего автомобиля, не упуская выгодных возможностей</p>
+          <br>
+          <time datetime="2023-11-26">26.11.2023</time>
+        </article>
+        <article class="card">
+          <img class="img-head" src="3.png" alt="Декабрьские скидки на товары">
+          <h3>Декабрьское поступление товара и актуальные скидки</h3>
+          <br>
+          <p>Экономьте на ремонте своего автомобиля, не упуская выгодных возможностей</p>
+          <br>
+          <time datetime="2023-11-26">26.11.2023</time>
+        </article>
+      </div>
+    </section>
+
+    <section class="services container">
+      <h2>Услуги</h2>
+      <div class="swiper services-swiper">
+        <div class="swiper-wrapper">
+          <article class="card swiper-slide">
+            <div class="image-wrapper">
+              <img src="4.jpg" alt="Настройка цифровой техники">
+              <div class="badges">
+                <span class="badge">Товар месяца</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Настроим цифровую технику в вашем присутствии</h3>
+              <br>
+              <br>
+              <br>
+              <p class="price">от 200 ₽</p>
+              <div class="pagination-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </article>
+          
+          <article class="card swiper-slide">
+            <div class="image-wrapper">
+              <img src="5.jpg" alt="Онлайн-помощь для гаджетов">
+              <div class="badges">
+                <span class="badge">Скидка</span>
+                <span class="badge">Акция</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Онлайн-помощь для ваших любимых гаджетов</h3>
+              <br>
+              <br>
+              <br>
+              <p class="price">от 800 ₽</p>
+              <div class="pagination-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </article>
+          
+          <article class="card swiper-slide">
+            <div class="image-wrapper">
+              <img src="6.png" alt="Установка бытовой техники">
+              <div class="badges">
+                <span class="badge">Новинка</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Установка и подключение бытовой техники</h3>
+              <br>
+              <br>
+              <br>
+              <p class="price">от 400 ₽</p>
+              <div class="pagination-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </article>
+          
+          <article class="card swiper-slide">
+            <div class="image-wrapper">
+              <img src="6.png" alt="Бесплатная диагностика техники">
+              <div class="badges">
+                <span class="badge">Товар месяца</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Получите бесплатную диагностику, ремонт, быструю замену или денежную компенсацию</h3>
+              <br>
+              <br>
+              <p class="price">от 200 ₽</p>
+              <div class="pagination-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Footer Logo</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.innerWidth < 768) {
+        const servicesSwiper = new Swiper('.services-swiper', {
+          slidesPerView: 'auto',
+          spaceBetween: 20,
+          centeredSlides: true,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            320: {
+              slidesPerView: 1.1,
+              centeredSlides: false
+            },
+            480: {
+              slidesPerView: 1.3
+            },
+            576: {
+              slidesPerView: 1.5
+            }
+          }
+        });
+      }
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) {
+          const swiper = document.querySelector('.services-swiper')?.swiper;
+          if (swiper) swiper.destroy(true, true);
+        } else {
+          if (!document.querySelector('.services-swiper')?.swiper) {
+            const servicesSwiper = new Swiper('.services-swiper', {
+              slidesPerView: 'auto',
+              spaceBetween: 20,
+              centeredSlides: true,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+            });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
